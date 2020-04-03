@@ -1,0 +1,26 @@
+### Headers settings
+company: nix
+
+### Xcode project settings
+project_name: four
+xcodeproj_path: FoursquareProject.xcodeproj
+prefix: nix
+
+### Code generation settings section
+# The main project target name
+project_target: FoursquareProject
+
+# The file path for new modules
+project_file_path: yes
+
+# The Xcode group path to new modules
+project_group_path: yes
+
+### Dependencies settings section
+podfile_path: Podfile
+
+### Templates
+templates:
+- {name: rviper_controller}
+- {name: mvvm_controller}
+- {name: swifty_viper}

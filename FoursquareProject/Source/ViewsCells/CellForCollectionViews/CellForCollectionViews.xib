@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="identifier" id="yCH-Jm-2hA" customClass="CellForCollectionViews" customModule="FoursquareProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="256"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="350" height="256"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LIq-ee-eCl">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="148"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="148" id="hKI-uu-jxS"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlF-yB-oBo">
+                        <rect key="frame" x="5" y="189" width="340" height="67"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="67" id="DOh-Wc-ykD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoj-LT-01F">
+                        <rect key="frame" x="5" y="156" width="340" height="25"/>
+                        <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
+                        <color key="textColor" red="0.083840926139999994" green="0.12998209220000001" blue="0.82253038609999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="hoj-LT-01F" firstAttribute="leading" secondItem="yCH-Jm-2hA" secondAttribute="leading" constant="5" id="47X-op-Fk8"/>
+                <constraint firstItem="LIq-ee-eCl" firstAttribute="leading" secondItem="yCH-Jm-2hA" secondAttribute="leading" id="EqP-AQ-rlq"/>
+                <constraint firstItem="LIq-ee-eCl" firstAttribute="top" secondItem="yCH-Jm-2hA" secondAttribute="top" id="QPL-ke-LW4"/>
+                <constraint firstAttribute="trailing" secondItem="hoj-LT-01F" secondAttribute="trailing" constant="5" id="T15-B5-oq2"/>
+                <constraint firstItem="hlF-yB-oBo" firstAttribute="top" secondItem="hoj-LT-01F" secondAttribute="bottom" constant="8" symbolic="YES" id="ejm-JC-JpJ"/>
+                <constraint firstItem="hlF-yB-oBo" firstAttribute="trailing" secondItem="hoj-LT-01F" secondAttribute="trailing" id="f7t-Ht-uzB"/>
+                <constraint firstItem="hoj-LT-01F" firstAttribute="top" secondItem="LIq-ee-eCl" secondAttribute="bottom" constant="8" id="kPv-NN-bpy"/>
+                <constraint firstItem="hlF-yB-oBo" firstAttribute="leading" secondItem="hoj-LT-01F" secondAttribute="leading" id="q16-HT-4Op"/>
+                <constraint firstAttribute="bottom" secondItem="hlF-yB-oBo" secondAttribute="bottom" id="qE9-hD-ayG"/>
+                <constraint firstItem="LIq-ee-eCl" firstAttribute="centerX" secondItem="hoj-LT-01F" secondAttribute="centerX" id="uPI-SI-kdZ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="20H-sB-abK"/>
+            <size key="customSize" width="380" height="256"/>
+            <connections>
+                <outlet property="cellDescriptionLabel" destination="hlF-yB-oBo" id="bWD-Hj-QSi"/>
+                <outlet property="cellImageView" destination="LIq-ee-eCl" id="pjD-Hn-IqX"/>
+                <outlet property="cellTitleLabel" destination="hoj-LT-01F" id="BzD-Kv-A1B"/>
+            </connections>
+            <point key="canvasLocation" x="0.0" y="147.52623688155924"/>
+        </collectionViewCell>
+    </objects>
+</document>

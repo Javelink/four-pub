@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.15"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Maps-->
+        <scene sceneID="bB8-Iq-U1P">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" title="Maps" id="fig-uE-L8t" customClass="MapViewController" customModule="FoursquareProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tbi-yD-PHq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="07p-17-3zb">
+                                <rect key="frame" x="0.0" y="146" width="375" height="632"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Tbi-yD-PHq" id="9VX-tm-Z6c"/>
+                                </connections>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ml9-td-QZh">
+                                <rect key="frame" x="0.0" y="118" width="375" height="28"/>
+                                <segments>
+                                    <segment title="Standart"/>
+                                    <segment title="Satellite"/>
+                                    <segment title="Hybrid"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onMapViewChanged:" destination="fig-uE-L8t" eventType="valueChanged" id="RvA-b2-tT7"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter place or adress" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NgT-xq-MJz">
+                                <rect key="frame" x="0.0" y="88" width="375" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NgT-xq-MJz" firstAttribute="leading" secondItem="Pvg-KB-Hjk" secondAttribute="leading" id="5re-ok-2ma"/>
+                            <constraint firstItem="Ml9-td-QZh" firstAttribute="top" secondItem="Pvg-KB-Hjk" secondAttribute="top" constant="30" id="Jkg-d8-OSl"/>
+                            <constraint firstItem="Ml9-td-QZh" firstAttribute="leading" secondItem="Pvg-KB-Hjk" secondAttribute="leading" id="KgT-Wg-FBO"/>
+                            <constraint firstItem="NgT-xq-MJz" firstAttribute="trailing" secondItem="Pvg-KB-Hjk" secondAttribute="trailing" id="Lpw-7K-Jm8"/>
+                            <constraint firstItem="Ml9-td-QZh" firstAttribute="trailing" secondItem="Pvg-KB-Hjk" secondAttribute="trailing" id="M5W-Re-5QB"/>
+                            <constraint firstItem="07p-17-3zb" firstAttribute="trailing" secondItem="Pvg-KB-Hjk" secondAttribute="trailing" id="OqX-2N-vWP"/>
+                            <constraint firstItem="07p-17-3zb" firstAttribute="top" secondItem="Pvg-KB-Hjk" secondAttribute="top" constant="58" id="Ufs-HX-cgf"/>
+                            <constraint firstItem="NgT-xq-MJz" firstAttribute="top" secondItem="Pvg-KB-Hjk" secondAttribute="top" id="oj2-yJ-VCq"/>
+                            <constraint firstItem="Ml9-td-QZh" firstAttribute="top" secondItem="NgT-xq-MJz" secondAttribute="bottom" id="paR-cT-gwv"/>
+                            <constraint firstItem="07p-17-3zb" firstAttribute="top" secondItem="Ml9-td-QZh" secondAttribute="bottom" constant="1" id="sFW-1Z-y8X"/>
+                            <constraint firstItem="07p-17-3zb" firstAttribute="bottom" secondItem="Pvg-KB-Hjk" secondAttribute="bottom" id="uqD-bW-Zh6"/>
+                            <constraint firstItem="07p-17-3zb" firstAttribute="leading" secondItem="Pvg-KB-Hjk" secondAttribute="leading" id="ut1-aT-4O5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Pvg-KB-Hjk"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Maps" id="5NV-qn-7rA"/>
+                    <connections>
+                        <outlet property="mapView" destination="07p-17-3zb" id="nNC-1E-JY1"/>
+                        <outlet property="searchTextField" destination="NgT-xq-MJz" id="2e4-qn-BvW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ezw-Rq-aPt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="906.39999999999998" y="92.364532019704441"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xrL-7c-DGr">
+            <objects>
+                <navigationController storyboardIdentifier="MapViewControllerNav" automaticallyAdjustsScrollViewInsets="NO" id="FYd-yU-zbT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="E9P-0c-HKf">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fig-uE-L8t" kind="relationship" relationship="rootViewController" id="sfn-LD-W04"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="85e-ei-BfM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-36" y="92.364532019704441"/>
+        </scene>
+    </scenes>
+</document>
